@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: clock
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  resources:
+    cache:
+      cachecontrol:
+        cache-public: true
+        max-age: 315360000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gateway.hrsaas.billjc.com:30066/hrsaas?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    #url: jdbc:mysql://test.hrsaas.billjc.com:30066/tenant_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: hrsaas
+    password: hrsaas
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.MySQL57Dialect
+    show-sql: false
